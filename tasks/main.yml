@@ -1,0 +1,28 @@
+---
+# tasks file for yumcron
+- name: "Install yum-cron package"
+  yum:
+    name: "yum-cron"
+    state: "latest"
+
+- name: "Copy yum-cron-hourly configuration file"
+  template:
+    src: "yum-cron-hourly.conf.j2"
+    dest: "/etc/yum/yum-cron-hourly.conf"
+    owner: "root"
+    group: "root"
+    mode: 0644
+
+- name: "Copy yum-cron configuration file"
+  template:
+    src: "yum-cron.conf.j2"
+    dest: "/etc/yum/yum-cron.conf"
+    owner: "root"
+    group: "root"
+    mode: 0644
+
+- name: "Start and enable yum-cron"
+  service:
+    name: "yum-cron"
+    state: "started"
+    enabled: "yes"

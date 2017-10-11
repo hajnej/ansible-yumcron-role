@@ -1,0 +1,16 @@
+---
+# defaults file for yumcron
+yumcron_update_messages_hourly: "yes"
+yumcron_download_updates_hourly: "yes"
+yumcron_apply_updates_hourly: "yes"
+yumcron_emit_via_hourly: "stdio"
+yumcron_email_to_hourly: "root"
+
+yumcron_update_cmd: "default"
+yumcron_update_messages: "no"
+yumcron_download_updates: "no"
+yumcron_apply_updates: "no"
+yumcron_emit_via: "stdio"
+yumcron_email_to: "root"
+
+
