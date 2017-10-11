@@ -11,7 +11,7 @@ There is no requirements for this role
 Role Variables
 --------------
 
-All variables are used to render `/etc/yum/yum-cron.conf` and `/etc/yum/yum-crn-hourly.conf`. Those variables respect yum-cron.conf configuration options. By default hourly updates are enabled and applied and report is sent via stdio. Daily updates are disabled because they are useless for this settings.
+All variables are used to render `/etc/yum/yum-cron.conf` and `/etc/yum/yum-cron-hourly.conf`. Those variables respect yum-cron.conf configuration options. By default hourly updates are enabled and applied and report is sent via stdio. Daily updates are disabled because they are useless for this settings.
 
     yumcron_update_messages_hourly: "yes"
     yumcron_download_updates_hourly: "yes"
